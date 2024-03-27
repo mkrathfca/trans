@@ -122,8 +122,31 @@
     <section>
         <h3>Demo: Chatbot on custom knowledgebase</h3>
     </section>
+        <!-- Floating chatbot button -->
+    <button id="chatbotButton">Chat</button>
 
-    <iframe src="https://copilotstudio.microsoft.com/environments/Default-289e3141-3166-4730-9a0c-b9ba490d78cd/bots/crc13_mfcTransTkWN5q/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    <!-- Chatbot iframe -->
+
+    <iframe id="chatbotFrame" style="display: none;" 
+        src="https://copilotstudio.microsoft.com/environments/Default-289e3141-3166-4730-9a0c-b9ba490d78cd/bots/crc13_mfcTransTkWN5q/webchat?__version__=2" 
+        frameborder="0">
+     </iframe>
+    <!-- JavaScript to handle button click and toggle chatbot visibility -->
+    <script>
+        // Get references to the button and iframe
+        var chatbotButton = document.getElementById('chatbotButton');
+        var chatbotFrame = document.getElementById('chatbotFrame');
+
+        // Add event listener to the button for click events
+        chatbotButton.addEventListener('click', function () {
+            // Toggle the visibility of the chatbot iframe
+            if (chatbotFrame.style.display === 'none') {
+                chatbotFrame.style.display = 'block';
+            } else {
+                chatbotFrame.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
