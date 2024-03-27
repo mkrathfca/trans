@@ -1,14 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        /* Style for the floating chatbot button */
+        #chatbotButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 1000;
+            /* Ensure the button is above other content */
+        }
+
+        /* Style for the chatbot iframe */
+        #chatbotFrame {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 500px;
+            height: 520px;
+            border: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            /* Ensure the chatbot frame is below the button */
+            display: none;
+            /* Initially hide the chatbot frame */
+        }
+
+        /* Read-only textbox */
+        .readonly-textbox {
+            width: 74%;
+            height: 200px;
+            resize: vertical;
+            overflow: auto;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Read-only textbox */
+        .faq-textbox {
+            width: 800px;
+            height: 540px;
+            resize: vertical;
+            overflow: auto;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            background-color: #d2c4c4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Demo</h1>
+    <section>
+        <table>
+            <tr>
+                <th>FAQ</th>
+                <th>MS-CopilotStudio</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="faq-textbox" readonly>
+1.	Please give a brief summary of the whole transcript
+2.	Who is satyendra singh and Sarath Nair
+3.	What is the background of Sarath Nair
+4.	What is the connection between satyendra singh and sarath nair
+5.	How did the interview panel, including swayam, masha, and pranesh, impact sarath nair's decision to join brandscapes?
+6.	How can brandscapes instill a greater sense of pride and recognition among its employees through external achievements and market visibility?
+7.	What is the profession of satyendra singh and sarath nair
+8.	Are satyendra singh and sarath nair public figures
+9.	Are satyendra singh and sarath nair associated with any organizations or companies
+10.	Is there any information available on the educational background of satyendra singh and sarath nair
+11.	Where did sarath nair attend college or university
+12.	What was Sarath Nair's educational background and career journey before joining Brandscapes?
+13.	What are Sarath Nair's hobbies and interests as mentioned in the conversation?
+14.	How did Sarath Nair decide to join Brandscapes and what influenced his decision?
+15.	Can you describe Sarath Nair's onboarding experience at Brandscapes?
+16.	How does Sarath Nair reflect on his career progression at Brandscapes and the different roles he has undertaken?
+17.	What changes does Sarath Nair suggest to make Brandscapes a more successful entity?
+18.	How does Sarath Nair view the future of Brandscapes and what improvements does he propose?
+19.	What challenges has Sarath Nair faced in his various roles at Brandscapes and how has he overcome them?
+20.	How does Sarath Nair describe Brandscapes to someone who is not familiar with the company?
+21.	How does Sarath Nair rate his career progression at Brandscapes and what areas does he feel he could have improved upon?
+22.	How did Sarath Nair's diverse upbringing across India influence his career choices and perspectives?
+23.	What role did Pranesh play in influencing Sarath Nair's decision to join Brandscapes?
+24.	How did the interview panel, including Swayam, Masha, and Pranesh, impact Sarath Nair's decision to join Brandscapes?
+25.	What challenges did Sarath Nair face during the interview process at Brandscapes, and how did he overcome them?
+26.	How did Sarath Nair's initial days at Brandscapes shape his learning experience and professional growth within the company?
+27.	In what ways has Sarath Nair's career progression at Brandscapes provided him with diverse exposure and learning opportunities?
+28.	How does Sarath Nair view the current work culture and challenges within Brandscapes compared to when he first joined the company?
+29.	What suggestions does Sarath Nair offer to enhance the success and effectiveness of Brandscapes as an organization?
+30.	How does Sarath Nair propose improving knowledge management and sharing within Brandscapes to benefit both current and future employees?
+31.	How can Brandscapes instill a greater sense of pride and recognition among its employees through external achievements and market visibility?
+
+</textarea>
+                </td>
+                <td valign="top">
+
+                    <video width="320" height="240" autoplay muted loop controls preload="auto">
+                        <source src="copilotStudio.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+
+                </td>
+            </tr>
+        </table>
+
+    </section>
+    <section>
+        <h3>Demo: Chatbot on custom knowledgebase</h3>
+    </section>
+
     <iframe src="https://copilotstudio.microsoft.com/environments/Default-289e3141-3166-4730-9a0c-b9ba490d78cd/bots/crc13_mfcTransTkWN5q/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
 </body>
 
